@@ -14,3 +14,11 @@ window.addEventOnElements = ($elements, eventType, callback) => {
         $element.addEventListener(eventType, callback)
     }
 }
+
+
+export const cardQueries = [
+    ["field", "uri"],
+    ["field", "uri"],
+    ["field", "uri"],
+    ["field", "uri"],
+]
