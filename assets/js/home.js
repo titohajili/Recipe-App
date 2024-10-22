@@ -8,6 +8,7 @@
  */
 
 import { fetchData } from "./api";
+import { $skeletonCard, cardQueries } from "./global";
 
 
  //Home page Search
@@ -44,7 +45,10 @@ import { fetchData } from "./api";
     this.setAttribute("tabindex", 0)
 
     $lastActiveTabPanel = $currentTabPanel
-    $lastActiveTabBtn = this
+    $lastActiveTabBtn = this;
+
+
+    addTabContent(this, $currentTabPanel)
  })
 
  /**
@@ -68,4 +72,32 @@ import { fetchData } from "./api";
       $lastActiveTabBtn.setAttribute("tabindex", 0)
       
    }
- })
+ });
+
+
+ /**
+  * WORK WITH API
+  * fetch data for tab content
+  */
+
+
+ const addTabContent = ($currentTabBtn, $currentTabPanel) => {
+   const $gridList = document.createElement("div");
+   $gridList.classList.add("grid-list");
+
+   $currentTabPanel.innerHTML = `
+   
+   <div class="grid-list">
+   ${$skeletonCard.repeat(12)}
+   </div>
+
+   `;
+
+   fetchData([['mealType', $currentTabBtn.textContent.trim().toLowerCase()], ...cardQueries], function (data) {
+
+     
+
+   })
+ }
+
+ addTabContent($lastActiveTabBtn, $lastActiveTabPanel)
