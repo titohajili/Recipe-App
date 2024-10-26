@@ -5,7 +5,10 @@
  */
 
 "use strict";
-
+/**
+ * @param {Array} queries Query array
+ * @param {Function} successCallback Success callback fuction
+ */
 
 window.ACCESS_POINT = "https://api.edamam.com/doc/open-api/recipe-search-v2.json";
 const APP_ID = "6dc0e1b3";

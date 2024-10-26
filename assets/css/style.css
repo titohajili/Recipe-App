@@ -365,7 +365,7 @@ main {flex-grow: 1;}
 
 .img-holder{
   background-color: var(--image-background);
-  background-image:url(../images/image-placeholder.svg);
+  background-image:url("../images/image-placeholder.svg");
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: center;
