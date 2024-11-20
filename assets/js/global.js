@@ -1,13 +1,5 @@
 "use strict";
 
-// 
-
-/**
- * 
- * @param {NodeList} $elements 
- * @param {String} eventType 
- * @param {Function} callback 
- */
 
 window.addEventOnElements = ($elements, eventType, callback) => {
     for (const $element of $elements) {
@@ -33,13 +25,13 @@ export const $skeletonCard = `
 
 <div class="card skeleton-card">
 
-<div class="skeleton card-banner"></div>
+        <div class="skeleton card-banner"></div>
 
-<div class="card-body">
-  <div class="skeleton card-title"></div>
+        <div class="card-body">
+          <div class="skeleton card-title"></div>
 
-  <div class="skeleton card-text"></div>
-</div>
-</div>
+          <div class="skeleton card-text"></div>
+        </div>
 
+      </div>
 `
